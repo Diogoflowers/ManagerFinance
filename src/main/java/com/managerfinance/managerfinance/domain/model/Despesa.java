@@ -3,18 +3,18 @@ package com.managerfinance.managerfinance.domain.model;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Transacao {
+public class Despesa {
 
     private BigDecimal valor;
-    private TipoTransacao tipo;
+    private TipoDespesa tipo;
     private String descricao;
     private LocalDate data;
     private Categoria categoria;
     private Usuario usuario;
 
-    public Transacao() {}
+    public Despesa() {}
 
-    public Transacao(BigDecimal valor, TipoTransacao tipo, String descricao, LocalDate data, Categoria categoria, Usuario usuario) {
+    public Despesa(BigDecimal valor, TipoDespesa tipo, String descricao, LocalDate data, Categoria categoria, Usuario usuario) {
 
         this.valor = valor;
         this.tipo = tipo;
@@ -36,11 +36,11 @@ public class Transacao {
         this.valor = valor;
     }
 
-    public TipoTransacao getTipo() {
+    public TipoDespesa getTipo() {
         return tipo;
     }
 
-    public void setTipo(TipoTransacao tipo) {
+    public void setTipo(TipoDespesa tipo) {
         this.tipo = tipo;
     }
 

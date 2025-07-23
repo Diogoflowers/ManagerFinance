@@ -1,6 +1,6 @@
 package com.managerfinance.managerfinance.domain.model;
 
-public enum TipoTransacao {
+public enum TipoDespesa {
     RECEITA,
     DESPESA
 }
