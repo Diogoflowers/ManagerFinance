@@ -1,9 +1,8 @@
-package com.managerfinance.managerfinance.adapters.out.persistence;
+package com.managerfinance.managerfinance.adapters.out.persistence.entity;
 
 import com.managerfinance.managerfinance.domain.model.Categoria;
 import com.managerfinance.managerfinance.domain.model.TipoDespesa;
 import com.managerfinance.managerfinance.domain.model.Despesa;
-import com.managerfinance.managerfinance.domain.model.Usuario;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +25,9 @@ public class DespesaJpaEntity {
     private String descricao;
     private LocalDate data;
     private Categoria categoria;
-    private Usuario usuario;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id")
+    private Long usuario_id;
 
     public static DespesaJpaEntity fromDomain(Despesa despesa) {
         DespesaJpaEntity entity = new DespesaJpaEntity();

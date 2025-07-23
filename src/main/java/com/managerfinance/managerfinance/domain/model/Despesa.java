@@ -10,18 +10,17 @@ public class Despesa {
     private String descricao;
     private LocalDate data;
     private Categoria categoria;
-    private Usuario usuario;
 
     public Despesa() {}
 
-    public Despesa(BigDecimal valor, TipoDespesa tipo, String descricao, LocalDate data, Categoria categoria, Usuario usuario) {
+    public Despesa(BigDecimal valor, TipoDespesa tipo, String descricao, LocalDate data, Categoria categoria) {
 
         this.valor = valor;
         this.tipo = tipo;
         this.descricao = descricao;
         this.data = data;
         this.categoria = categoria;
-        this.usuario = usuario;
+
     }
 
 
@@ -68,11 +67,4 @@ public class Despesa {
         this.categoria = categoria;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
 }
